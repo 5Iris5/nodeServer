@@ -2,8 +2,8 @@
 var http = require('http')
 //通过http模块创建一个服务器
 var server = http.createServer(function(req,res){
-	//当本次请求到达浏览器后，在终端输出Iris
-	console.log('Iris')
+	//当本次请求到达浏览器后，在终端输出请求的url信息
+	console.log(req.url)
 	//设置响应头
 	res.setHeader('Content-Type','text/plain;charset=gbk')
 	//检测服务器状态
